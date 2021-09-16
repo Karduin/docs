@@ -12,3 +12,19 @@
 
 #### Linux
 
+* Install _git_
+* Install _zsh_
+* Install _oh-my-zsh_
+    ```
+    sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    ```
+* List _Themes_
+    ```
+    cd ~/.oh-my-zsh/themes    
+    ls
+    ```
+* Select _Theme_
+    ```
+    sudo nano ~/.zshrc
+    ```
+* Change 
