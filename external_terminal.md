@@ -4,7 +4,7 @@
 * Press F1
 * Looking for _'Open Settings'_ and choose _Preferences : Open Settings (JSON)_
 
-#### Windows
+#### Windows with Windows Terminal
 * Looking for _“terminal.external.windowsExec”: “C:\\WINDOWS\\SYSTEM32\\cmd.exe”,_
 * Change the value to _“wt -p cmd cmd”_
 
