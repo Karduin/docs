@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>The Editor and Viewer &#8212; Version 2.6b1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a56b48ff" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=3be339c5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usage_writing';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Formatting Your Text" href="usage_format.html" />
+    <link rel="prev" title="Project Views" href="usage_project.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="2.6b1" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/novelwriter-light.png" class="logo__image only-light" alt="Version 2.6b1 - Home"/>
+    <img src="_static/novelwriter-dark.png" class="logo__image only-dark pst-js-only" alt="Version 2.6b1 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<p class="nw-sidebar-title">Version 2.6b1</p>
+</div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Main Page</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="int_introduction.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_overview.html">What to Read First</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_started.html">Setup and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_howto.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_glossary.html">Glossary</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Using novelWriter</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="usage_breakdown.html">How it Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_project.html">Project Views</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The Editor and Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_format.html">Formatting Your Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_shortcuts.html">Keyboard Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_typography.html">Typographical Notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Organising Your Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="project_overview.html">Managing Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_structure.html">Novel Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_references.html">Tags and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_manuscript.html">Building the Manuscript</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="more_customise.html">Customisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_projectformat.html">Project Format Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_counting.html">Word and Text Counts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Topics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tech_locations.html">File Locations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_storage.html">How Data is Stored</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_source.html">Running from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_tests.html">Running Tests</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/vkbo/novelwriter" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/vkbo/novelwriter/issues/new?title=Issue%20on%20page%20%2Fusage_writing.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/usage_writing.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Editor and Viewer</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-a-document">Editing a Document</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spell-checking">Spell Checking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editor-auto-completer">Editor Auto-Completer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-a-document">Viewing a Document</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#search-replace">Search &amp; Replace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-replace-as-you-type">Auto-Replace as You Type</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="the-editor-and-viewer">
+<span id="a-ui-writing"></span><h1>The Editor and Viewer<a class="headerlink" href="#the-editor-and-viewer" title="Link to this heading">#</a></h1>
+<p>This chapter covers in more detail how the document editor and viewer panels work.</p>
+<section id="editing-a-document">
+<span id="a-ui-edit"></span><h2>Editing a Document<a class="headerlink" href="#editing-a-document" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id1">
+<img alt="_images/fig_editor.png" src="_images/fig_editor.png" />
+<figcaption>
+<p><span class="caption-text">A screenshot of the Document Editor panel.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>To edit a document, double-click it in the project tree, or press the <kbd class="kbd docutils literal notranslate">Return</kbd> key while
+having it selected. This will open the document in the document editor. The editor uses a
+Markdown-like syntax for some features, and a novelWriter-specific syntax for others. The syntax
+format is described in the <a class="reference internal" href="usage_format.html#a-fmt"><span class="std std-ref">Formatting Your Text</span></a> chapter.</p>
+<p>The editor has a maximise button, which toggles the <strong>Focus Mode</strong>, and a close button in the
+top–right corner. On the top–left side you will find a tools button that opens a toolbar with a
+few buttons for applying text formatting, a drop down menu for navigating between headings, and a
+search button to open the search dialog.</p>
+<p>Both the document editor and viewer will show the label of the currently open document in the
+header at the top of the edit or view panel. Optionally, the full project path to the document can
+be shown. This can be set in <strong>Preferences</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Clicking on the document title bar will select the document in the project tree and thus reveal
+its location there, making it easier to find in a large project.</p>
+</div>
+<p>Any <a class="reference internal" href="int_glossary.html#term-Reference"><span class="xref std std-term">references</span></a> in the editor can be opened in the viewer by moving the cursor to
+the label and pressing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Return</kbd></kbd>. You can also control-click them with your mouse.</p>
+<section id="spell-checking">
+<h3>Spell Checking<a class="headerlink" href="#spell-checking" title="Link to this heading">#</a></h3>
+<p>A third party library called Enchant is used for spell checking in the editor. The controls for
+spell checking can be found in the <strong>Tools</strong> menu. You can also set spell checking language in
+<strong>Project Settings</strong>.</p>
+<p>This spell checking library comes with support for custom words that you can add by selecting
+“Add Word to Dictionary” from the context menu when a word is highlighted by the spell checker as
+misspelled. The custom words are managed on a per-project basis, and can the list of words can be
+edited from the <strong>Project Word List</strong> tool available from the <strong>Tools</strong> menu.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Generally, spell checking dictionaries are collected from your operating system, but on Windows
+they are not. See <a class="reference internal" href="more_customise.html#a-custom-dict"><span class="std std-ref">Spell Check Dictionaries</span></a> for how to add spell checking dictionaries on Windows.</p>
+</div>
+</section>
+<section id="editor-auto-completer">
+<h3>Editor Auto-Completer<a class="headerlink" href="#editor-auto-completer" title="Link to this heading">#</a></h3>
+<p>If you type the character <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> on a new line, a pop-up menu will appear showing the different
+available keywords. The list will shorten as you type. Once a keyword command has been selected or
+typed, the editor may suggest further options based on your project content. See
+<a class="reference internal" href="project_references.html#a-references-completer"><span class="std std-ref">The References Auto-Completer</span></a> for more details.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.</span></p>
+</div>
+</section>
+</section>
+<section id="viewing-a-document">
+<span id="a-ui-view"></span><h2>Viewing a Document<a class="headerlink" href="#viewing-a-document" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id2">
+<img alt="_images/fig_viewer.png" src="_images/fig_viewer.png" />
+<figcaption>
+<p><span class="caption-text">A screenshot of the Document Viewer panel.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Any document in the project tree can also be viewed in parallel in a right hand side document
+viewer. To view a document, press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">R</kbd></kbd>, or select <strong>View Document</strong> in the menu or context
+menu. If you have a middle mouse button, middle-clicking on the document will also open it in the
+viewer.</p>
+<p>The document viewed does not have to be the same document as the one currently being edited.
+However, If you <em>are</em> viewing the same document, pressing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">R</kbd></kbd> again will update the
+document with your latest changes. You can also press the reload button in the top–right corner of
+the viewer panel, next to the close button, to achieve the same thing.</p>
+<p>In the viewer <a class="reference internal" href="int_glossary.html#term-Reference"><span class="xref std std-term">references</span></a> become clickable links. Clicking them will replace the
+content of the viewer with the content of the document the reference points to.</p>
+<p>The document viewer keeps a history of viewed documents, which you can navigate with the arrow
+buttons in the top–left corner of the viewer. If your mouse has backward and forward navigation
+buttons, these can be used as well. They work just like the backward and forward features in a
+browser. The left-most button is a dropdown menu for quickly navigation between headings in the
+document.</p>
+<p>At the bottom of the view panel there is a <strong>References</strong> panel. (If it is hidden, click the button
+on the left side of the footer area to reveal it.) This panel contains a References tab with links
+to all documents referring back to the one you’re currently viewing, if any has been defined. If
+you have created root folders and tags for various story elements like characters and plot points,
+these will appear as additional tabs in this panel.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>References</strong> panel relies on an up-to-date <a class="reference internal" href="int_glossary.html#term-Project-Index"><span class="xref std std-term">index</span></a> of the project.
+The index is maintained automatically. However, if anything is missing, or seems wrong, the
+index can always be rebuilt by selecting <strong>Rebuild Index</strong> from the <strong>Tools</strong> menu, or by
+pressing <kbd class="kbd docutils literal notranslate">F9</kbd>.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2: </span>The reference panel was redesigned and the additional tabs added.</p>
+</div>
+</section>
+<section id="search-replace">
+<span id="a-ui-edit-search"></span><h2>Search &amp; Replace<a class="headerlink" href="#search-replace" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id3">
+<img alt="_images/fig_editor_search.png" src="_images/fig_editor_search.png" />
+<figcaption>
+<p><span class="caption-text">A screenshot of the Document Editor search box.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The document editor has a search and replace tool that can be activated with <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">F</kbd></kbd> for
+search mode or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">H</kbd></kbd> for search and replace mode.</p>
+<p>Pressing <kbd class="kbd docutils literal notranslate">Return</kbd> while in the search box will search for the next occurrence of the word, and
+<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">Return</kbd></kbd> for the previous. Pressing <kbd class="kbd docutils literal notranslate">Return</kbd> in the replace box, will replace the
+highlighted text and move to the next result.</p>
+<p>There are a number of settings for the search tool available as toggle switches above the search
+box. They allow you to search for, in order: matched case only, whole word results only, search
+using regular expressions, loop search when reaching the end of the document, and move to the next
+document when reaching the end. There is also a switch that will try to match the case of the word
+when the replacement is made. That is, it will try to keep the word upper, lower, or capitalised to
+match the word being replaced.</p>
+<p>The regular expression search is somewhat dependant on which version of Qt your system has. If you
+have Qt 5.13 or higher, there is better support for Unicode symbols in the search.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For more information on the capabilities of the Regular Expression option, see the Qt
+documentation for the <a class="reference external" href="https://doc.qt.io/qt-5/qregularexpression.html">QRegularExpression</a>
+class.</p>
+</div>
+</section>
+<section id="auto-replace-as-you-type">
+<span id="a-ui-edit-auto"></span><h2>Auto-Replace as You Type<a class="headerlink" href="#auto-replace-as-you-type" title="Link to this heading">#</a></h2>
+<p>A few auto-replace features are supported by the editor. You can control every aspect of the
+auto-replace feature from <strong>Preferences</strong>. You can also disable this feature entirely if you wish.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you don’t like auto-replacement, all symbols inserted by this feature are also available in
+the <span class="guilabel">Insert</span> menu, and via <a class="reference internal" href="usage_shortcuts.html#a-kb-ins"><span class="std std-ref">Insert Shortcuts</span></a>. You may also be using a <a class="reference external" href="https://en.wikipedia.org/wiki/Compose_key">Compose Key</a>
+setup, which means you may not need the auto-replace feature at all.</p>
+</div>
+<p>The editor is able to replace two and three hyphens with short and long dashes, triple points with
+ellipsis, and replace straight single and double quotes with user-defined quote symbols. It will
+also try to determine whether to use the opening or closing symbol, although this feature isn’t
+always accurate. Especially distinguishing between closing single quote and apostrophe can be
+tricky for languages that use the same symbol for these, like English does.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If the auto-replace feature changes a symbol when you did not want it to change, pressing
+<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Z</kbd></kbd> once after the auto-replacement will undo it without undoing the character
+you typed before it.</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="usage_project.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Project Views</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="usage_format.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Formatting Your Text</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-a-document">Editing a Document</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spell-checking">Spell Checking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editor-auto-completer">Editor Auto-Completer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-a-document">Viewing a Document</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#search-replace">Search &amp; Replace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-replace-as-you-type">Auto-Replace as You Type</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Veronica Berglyd Olsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

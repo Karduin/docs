@@ -1,0 +1,637 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Setup and Installation &#8212; Version 2.6b1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a56b48ff" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=3be339c5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'int_started';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tips &amp; Tricks" href="int_howto.html" />
+    <link rel="prev" title="What to Read First" href="int_overview.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="2.6b1" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/novelwriter-light.png" class="logo__image only-light" alt="Version 2.6b1 - Home"/>
+    <img src="_static/novelwriter-dark.png" class="logo__image only-dark pst-js-only" alt="Version 2.6b1 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<p class="nw-sidebar-title">Version 2.6b1</p>
+</div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Main Page</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="int_introduction.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_overview.html">What to Read First</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Setup and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_howto.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_glossary.html">Glossary</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Using novelWriter</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="usage_breakdown.html">How it Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_project.html">Project Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_writing.html">The Editor and Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_format.html">Formatting Your Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_shortcuts.html">Keyboard Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_typography.html">Typographical Notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Organising Your Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="project_overview.html">Managing Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_structure.html">Novel Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_references.html">Tags and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_manuscript.html">Building the Manuscript</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="more_customise.html">Customisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_projectformat.html">Project Format Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_counting.html">Word and Text Counts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Topics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tech_locations.html">File Locations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_storage.html">How Data is Stored</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_source.html">Running from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_tests.html">Running Tests</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/vkbo/novelwriter" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/vkbo/novelwriter/issues/new?title=Issue%20on%20page%20%2Fint_started.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/int_started.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Setup and Installation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-on-windows">Installing on Windows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-on-linux">Installing on Linux</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu">Ubuntu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debian-and-mint">Debian and Mint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appimage-releases">AppImage Releases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-on-macos">Installing on MacOS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-from-pypi">Installing from PyPi</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="setup-and-installation">
+<span id="a-started"></span><h1>Setup and Installation<a class="headerlink" href="#setup-and-installation" title="Link to this heading">#</a></h1>
+<p>Ready-made packages and installers for novelWriter are available for all major platforms, including
+Linux, Windows and MacOS, from the <a class="reference external" href="https://download.novelwriter.io">Downloads page</a>. See below for install additional instructions
+for each platform.</p>
+<p>You can also install novelWriter from the Python Package Index (<a class="reference external" href="https://pypi.org/project/novelWriter/">PyPi</a>). See <a class="reference internal" href="#a-started-pip"><span class="std std-ref">Installing from PyPi</span></a>.
+Installing from PyPi does not set up icon launchers, so you will either have to do this yourself,
+or start novelWriter from the command line.</p>
+<p>Spell checking in novelWriter is provided by a third party library called <a class="reference external" href="https://abiword.github.io/enchant/">Enchant</a>. Generally, it
+should pull dictionaries from your operating system automatically. However, on Windows they must be
+installed manually. See <a class="reference internal" href="more_customise.html#a-custom-dict"><span class="std std-ref">Spell Check Dictionaries</span></a> for more details.</p>
+<section id="installing-on-windows">
+<span id="a-started-windows"></span><h2>Installing on Windows<a class="headerlink" href="#installing-on-windows" title="Link to this heading">#</a></h2>
+<p>You can install novelWriter with both Python and library dependencies embedded using the Windows
+Installer (setup.exe) file from the <a class="reference external" href="https://download.novelwriter.io">Downloads page</a>, or from the <a class="reference external" href="https://github.com/vkbo/novelWriter/releases">Releases</a> page on <a class="reference external" href="https://github.com/vkbo/novelWriter">GitHub</a>.
+Installing it should be straightforward.</p>
+<p>If you have any issues, try uninstalling the previous version and making a fresh install. If you
+already had a version installed via a different method, you should uninstall that first as having
+multiple installations has been known to cause problems.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The novelWriter installer is not signed because Microsoft doesn’t currently provide a way for
+non-profit open source projects to properly sign their installers. The novelWriter project
+doesn’t have the funding to pay for commercial software signing certificates. You will therefore
+see an additional warning about this when you download and run the installer.</p>
+</div>
+</section>
+<section id="installing-on-linux">
+<span id="a-started-linux"></span><h2>Installing on Linux<a class="headerlink" href="#installing-on-linux" title="Link to this heading">#</a></h2>
+<p>A Debian package can be downloaded from the <a class="reference external" href="https://download.novelwriter.io">Downloads page</a>, or from the <a class="reference external" href="https://github.com/vkbo/novelWriter/releases">Releases</a> page on
+<a class="reference external" href="https://github.com/vkbo/novelWriter">GitHub</a>. This package should work on both Debian, Ubuntu and Linux Mint, at least.</p>
+<p>If you prefer, you can also add the novelWriter repository on Launchpad to your package manager.
+The Launchpad packages <a class="reference external" href="https://launchpad.net/~vkbo">are signed by the author</a>.</p>
+<section id="ubuntu">
+<h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Link to this heading">#</a></h3>
+<p>You can add the Ubuntu <a class="reference external" href="https://launchpad.net/~vkbo/+archive/ubuntu/novelwriter">PPA</a> and install novelWriter with the following commands.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:vkbo/novelwriter
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>novelwriter
+</pre></div>
+</div>
+<p>If you want the <a class="reference external" href="https://launchpad.net/~vkbo/+archive/ubuntu/novelwriter-pre">Pre-Release PPA</a> instead, add the <code class="docutils literal notranslate"><span class="pre">ppa:vkbo/novelwriter-pre</span></code> repository.</p>
+</section>
+<section id="debian-and-mint">
+<h3>Debian and Mint<a class="headerlink" href="#debian-and-mint" title="Link to this heading">#</a></h3>
+<p>Since this is a pure Python package, the Launchpad PPA can in principle also be used on Debian or
+Mint. However, the above command will fail to add the signing key, as it is Ubuntu-specific.</p>
+<p>Instead, run the following commands to add the repository and key:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>gpg<span class="w"> </span>--no-default-keyring<span class="w"> </span>--keyring<span class="w"> </span>/usr/share/keyrings/novelwriter-ppa-keyring.gpg<span class="w"> </span>--keyserver<span class="w"> </span>hkp://keyserver.ubuntu.com:80<span class="w"> </span>--recv-keys<span class="w"> </span>F19F1FCE50043114
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [signed-by=/usr/share/keyrings/novelwriter-ppa-keyring.gpg] http://ppa.launchpad.net/vkbo/novelwriter/ubuntu noble main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/novelwriter.list
+</pre></div>
+</div>
+<p>Then run the update and install commands as for Ubuntu:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>novelwriter
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may need to use the Ubuntu 20.04 (focal) packages for Debian 11 or earlier. The newer Ubuntu
+packages use a different compression algorithm that may not be supported.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you get an error message like <code class="docutils literal notranslate"><span class="pre">gpg:</span> <span class="pre">failed</span> <span class="pre">to</span> <span class="pre">create</span> <span class="pre">temporary</span> <span class="pre">file</span></code> when importing the key
+from the Ubuntu keyserver, try creating the folder it fails on, and import the key again:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mkdir<span class="w"> </span>/root/.gnupg/
+</pre></div>
+</div>
+</div>
+</section>
+<section id="appimage-releases">
+<h3>AppImage Releases<a class="headerlink" href="#appimage-releases" title="Link to this heading">#</a></h3>
+<p>For other Linux distros than the ones mentioned above, the primary option is <a class="reference external" href="https://appimage.org/">AppImage</a>. These are
+completely standalone images for the app that include the necessary environment to run novelWriter.
+They can of course be run on any Linux distro, if you prefer this to native packages.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>novelWriter generally doesn’t support Python versions that have reached end of life. If your
+Linux distro still uses older Python versions and novelWriter won’t run, you may want to try the
+AppImage instead.</p>
+</div>
+</section>
+</section>
+<section id="installing-on-macos">
+<span id="a-started-macos"></span><h2>Installing on MacOS<a class="headerlink" href="#installing-on-macos" title="Link to this heading">#</a></h2>
+<p>You can install novelWriter with both its Python and library dependencies embedded using the DMG
+application image file from the <a class="reference external" href="https://download.novelwriter.io">Downloads page</a>, or from the <a class="reference external" href="https://github.com/vkbo/novelWriter/releases">Releases</a> page on <a class="reference external" href="https://github.com/vkbo/novelWriter">GitHub</a>.
+Installing it should be straightforward.</p>
+<ul class="simple">
+<li><p>Download the DMG file and open it. Then drag the novelWriter icon to the <span class="guilabel">Applications</span>
+folder on the right. This will install it into your <span class="guilabel">Applications</span>.</p></li>
+<li><p>The first time you try to launch it, it will say that the bundle cannot be verified, simply press
+the <span class="guilabel">Open</span> button to add an exception.</p></li>
+<li><p>If you are not presented with an <span class="guilabel">Open</span> button in the dialog, launch the application
+again by right clicking on the application in Finder and selecting <span class="guilabel">Open</span> from the
+context menu.</p></li>
+</ul>
+<p>The context menu can also be accessed by option-clicking if you have a one button mouse. This is
+done by holding down the option key on your keyboard and clicking on the application in Finder.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The novelWriter DMG is not signed because Apple doesn’t currently provide a way for non-profit
+open source projects to properly sign their installers. The novelWriter project doesn’t have the
+funding to pay for commercial software signing certificates.</p>
+</div>
+</section>
+<section id="installing-from-pypi">
+<span id="a-started-pip"></span><h2>Installing from PyPi<a class="headerlink" href="#installing-from-pypi" title="Link to this heading">#</a></h2>
+<p>novelWriter is also available on the Python Package Index, or <a class="reference external" href="https://pypi.org/project/novelWriter/">PyPi</a>. This install method works on
+all supported operating systems with a suitable Python environment.</p>
+<p>To install from PyPi you must first have the <code class="docutils literal notranslate"><span class="pre">python</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code> commands available on your
+system. You can download Python from <a class="reference external" href="https://www.python.org/downloads/">python.org</a>. It is recommended that you install the latest
+version. If you are on Windows, also make sure to select the “Add Python to PATH” option during
+installation.</p>
+<p>To install novelWriter from PyPi, use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>novelwriter
+</pre></div>
+</div>
+<p>To upgrade an existing installation, use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>novelwriter
+</pre></div>
+</div>
+<p>When installing via pip, novelWriter can be launched from command line with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>novelwriter
+</pre></div>
+</div>
+<p>Make sure the install location for pip is in your PATH variable. This is not always the case by
+default, and then you may get a “Not Found” error when running the <code class="docutils literal notranslate"><span class="pre">novelwriter</span></code> command.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="int_overview.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">What to Read First</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="int_howto.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tips &amp; Tricks</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-on-windows">Installing on Windows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-on-linux">Installing on Linux</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu">Ubuntu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debian-and-mint">Debian and Mint</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appimage-releases">AppImage Releases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-on-macos">Installing on MacOS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-from-pypi">Installing from PyPi</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Veronica Berglyd Olsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

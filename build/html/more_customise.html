@@ -1,0 +1,683 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Customisations &#8212; Version 2.6b1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a56b48ff" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=3be339c5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'more_customise';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Project Format Changes" href="more_projectformat.html" />
+    <link rel="prev" title="Building the Manuscript" href="project_manuscript.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="2.6b1" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/novelwriter-light.png" class="logo__image only-light" alt="Version 2.6b1 - Home"/>
+    <img src="_static/novelwriter-dark.png" class="logo__image only-dark pst-js-only" alt="Version 2.6b1 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<p class="nw-sidebar-title">Version 2.6b1</p>
+</div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Main Page</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="int_introduction.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_overview.html">What to Read First</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_started.html">Setup and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_howto.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_glossary.html">Glossary</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Using novelWriter</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="usage_breakdown.html">How it Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_project.html">Project Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_writing.html">The Editor and Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_format.html">Formatting Your Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_shortcuts.html">Keyboard Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_typography.html">Typographical Notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Organising Your Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="project_overview.html">Managing Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_structure.html">Novel Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_references.html">Tags and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_manuscript.html">Building the Manuscript</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Details</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Customisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_projectformat.html">Project Format Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_counting.html">Word and Text Counts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Topics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tech_locations.html">File Locations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_storage.html">How Data is Stored</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_source.html">Running from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_tests.html">Running Tests</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/vkbo/novelwriter" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/vkbo/novelwriter/issues/new?title=Issue%20on%20page%20%2Fmore_customise.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/more_customise.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Customisations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spell-check-dictionaries">Spell Check Dictionaries</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linux-and-macos">Linux and MacOS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-and-gui-themes">Syntax and GUI Themes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-gui-and-icons-theme">Custom GUI and Icons Theme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-syntax-theme">Custom Syntax Theme</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="customisations">
+<span id="a-custom"></span><h1>Customisations<a class="headerlink" href="#customisations" title="Link to this heading">#</a></h1>
+<p>There are a few ways you can customise novelWriter yourself. Currently, you can add new GUI themes,
+your own syntax themes, and install additional dictionaries.</p>
+<section id="spell-check-dictionaries">
+<span id="a-custom-dict"></span><h2>Spell Check Dictionaries<a class="headerlink" href="#spell-check-dictionaries" title="Link to this heading">#</a></h2>
+<p>novelWriter uses <a class="reference external" href="https://rrthomas.github.io/enchant/">Enchant</a> as the spell checking tool. Depending on your operating system, it may or
+may not load all installed spell check dictionaries automatically.</p>
+<section id="linux-and-macos">
+<h3>Linux and MacOS<a class="headerlink" href="#linux-and-macos" title="Link to this heading">#</a></h3>
+<p>On Linux and MacOS, you generally only have to install hunspell, aspell or myspell dictionaries on
+your system like you do for other applications. See your distro or OS documentation for how to do
+this. These dictionaries should show up as available spell check languages in novelWriter.</p>
+</section>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading">#</a></h3>
+<p>For Windows, English is included with the installation. For other languages you have to download
+and add dictionaries yourself.</p>
+<p><strong>Install Tool</strong></p>
+<p>A small tool to assist with this can be found under <strong>Tools &gt; Add Dictionaries</strong>. It will import
+spell checking dictionaries from Free Office or Libre Office extensions. The dictionaries are then
+installed in the install location for the Enchant library and should thus work for any application
+that uses Enchant for spell checking.</p>
+<p><strong>Manual Install</strong></p>
+<p>If you prefer to do this manually or want to use a different source than the ones mentioned above,
+You need to get compatible dictionary files for your language. You need two files files ending with
+<code class="docutils literal notranslate"><span class="pre">.aff</span></code> and <code class="docutils literal notranslate"><span class="pre">.dic</span></code>. These files must then be copied to the following location:</p>
+<p><code class="docutils literal notranslate"><span class="pre">C:\Users\&lt;USER&gt;\AppData\Local\enchant\hunspell</span></code></p>
+<p>This assumes your user profile is stored at <code class="docutils literal notranslate"><span class="pre">C:\Users\&lt;USER&gt;</span></code>. The last one or two folders may
+not exist, so you may need to create them.</p>
+<p>You can find the various dictionaries on the <a class="reference external" href="https://cgit.freedesktop.org/libreoffice/dictionaries/tree/">Free Desktop</a> website.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Free Desktop link points to a repository, and what may look like file links inside the
+dictionary folder are actually links to web pages. If you right-click and download those, you
+get HTML files, not dictionaries!</p>
+<p>In order to download the actual dictionary files, right-click the “plain” label at the end of
+each line and download that.</p>
+</div>
+</section>
+</section>
+<section id="syntax-and-gui-themes">
+<span id="a-custom-theme"></span><h2>Syntax and GUI Themes<a class="headerlink" href="#syntax-and-gui-themes" title="Link to this heading">#</a></h2>
+<p>Adding your own GUI and syntax themes is relatively easy, although it requires that you manually
+edit config files with colour values. The themes are defined by simple plain text config files with
+meta data and colour settings.</p>
+<p>In order to make your own versions, first copy one of the existing files to your local computer and
+modify it as you like.</p>
+<ul class="simple">
+<li><p>The existing syntax themes are stored in
+<a class="reference external" href="https://github.com/vkbo/novelWriter/tree/main/novelwriter/assets/syntax">novelwriter/assets/syntax</a>.</p></li>
+<li><p>The existing GUI themes are stored in
+<a class="reference external" href="https://github.com/vkbo/novelWriter/tree/main/novelwriter/assets/themes">novelwriter/assets/themes</a>.</p></li>
+<li><p>The existing icon themes are stored in
+<a class="reference external" href="https://github.com/vkbo/novelWriter/tree/main/novelwriter/assets/icons">novelwriter/assets/icons</a>.</p></li>
+</ul>
+<p>Remember to also change the name of your theme by modifying the <code class="docutils literal notranslate"><span class="pre">name</span></code> setting at the top of the
+file, otherwise you may not be able to distinguish them in <strong>Preferences</strong>.</p>
+<p>For novelWriter to be able to locate the custom theme files, you must copy them to the
+<a class="reference internal" href="tech_locations.html#a-locations-data"><span class="std std-ref">Application Data</span></a> location in your home or user area. There should be a folder there named
+<code class="docutils literal notranslate"><span class="pre">syntax</span></code> for syntax themes, just <code class="docutils literal notranslate"><span class="pre">themes</span></code> for GUI themes, and <code class="docutils literal notranslate"><span class="pre">icons</span></code> for icon themes. These
+folders are created the first time you start novelWriter.</p>
+<p>Once the files are copied there, they should show up in <strong>Preferences</strong> with the label you
+set as <code class="docutils literal notranslate"><span class="pre">name</span></code> inside the file.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.0: </span>The <code class="docutils literal notranslate"><span class="pre">icontheme</span></code> value was added to GUI themes. Make sure you set this value in existing custom
+themes. Otherwise, novelWriter will try to guess your icon theme, and may not pick the most
+suitable one.</p>
+</div>
+<section id="custom-gui-and-icons-theme">
+<h3>Custom GUI and Icons Theme<a class="headerlink" href="#custom-gui-and-icons-theme" title="Link to this heading">#</a></h3>
+<p>A GUI theme <code class="docutils literal notranslate"><span class="pre">.conf</span></code> file consists of the following settings:</p>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[Main]</span>
+<span class="na">name</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s">My Custom Theme</span>
+<span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">A description of my custom theme</span>
+<span class="na">author</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s">Jane Doe</span>
+<span class="na">credit</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s">John Doe</span>
+<span class="na">url</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s">https://example.com</span>
+<span class="na">license</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">CC BY-SA 4.0</span>
+<span class="na">licenseurl</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">https://creativecommons.org/licenses/by-sa/4.0/</span>
+<span class="na">icontheme</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">typicons_light</span>
+
+<span class="k">[Palette]</span>
+<span class="na">window</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+<span class="na">windowtext</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+<span class="na">base</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+<span class="na">alternatebase</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+<span class="na">text</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+<span class="na">tooltipbase</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+<span class="na">tooltiptext</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+<span class="na">button</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+<span class="na">buttontext</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+<span class="na">brighttext</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+<span class="na">highlight</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+<span class="na">highlightedtext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+<span class="na">link</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+<span class="na">linkvisited</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">100, 100, 100</span>
+
+<span class="k">[GUI]</span>
+<span class="na">helptext</span><span class="w">        </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">fadedtext</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">128, 128, 128</span>
+<span class="na">errortext</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">255,   0,   0</span>
+<span class="na">statusnone</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s">120, 120, 120</span>
+<span class="na">statussaved</span><span class="w">     </span><span class="o">=</span><span class="w">   </span><span class="s">2, 133,  37</span>
+<span class="na">statusunsaved</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s">200,  15,  39</span>
+</pre></div>
+</div>
+<p>In the Main section you must at least define the <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">icontheme</span></code> settings. The
+<code class="docutils literal notranslate"><span class="pre">icontheme</span></code> settings should correspond to one of the internal icon themes, either
+<code class="docutils literal notranslate"><span class="pre">typicons_light</span></code> or <code class="docutils literal notranslate"><span class="pre">typicons_dark</span></code>, or to an icon theme in your custom icons directory. The
+setting must match the icon theme’s folder name.</p>
+<p>The Palette values correspond to the Qt enum values for <code class="docutils literal notranslate"><span class="pre">QPalette::ColorRole</span></code>, see the
+<a class="reference external" href="https://doc.qt.io/qt-5.15/qpalette.html#ColorRole-enum">Qt documentation</a> for more details. The
+colour values are RGB numbers on the format <code class="docutils literal notranslate"><span class="pre">r,</span> <span class="pre">g,</span> <span class="pre">b</span></code> where each is an integer from <code class="docutils literal notranslate"><span class="pre">0</span></code> to
+<code class="docutils literal notranslate"><span class="pre">255</span></code>. Omitted values are not loaded and will use default values. If the <code class="docutils literal notranslate"><span class="pre">helptext</span></code> colour is
+not defined, it is computed as a colour between the <code class="docutils literal notranslate"><span class="pre">window</span></code> and <code class="docutils literal notranslate"><span class="pre">windowtext</span></code> colour.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.5: </span>The <code class="docutils literal notranslate"><span class="pre">fadedtext</span></code> and <code class="docutils literal notranslate"><span class="pre">errortext</span></code> theme colour entries were added.</p>
+</div>
+</section>
+<section id="custom-syntax-theme">
+<h3>Custom Syntax Theme<a class="headerlink" href="#custom-syntax-theme" title="Link to this heading">#</a></h3>
+<p>A syntax theme <code class="docutils literal notranslate"><span class="pre">.conf</span></code> file consists of the following settings:</p>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="k">[Main]</span>
+<span class="na">name</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s">My Syntax Theme</span>
+<span class="na">author</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">Jane Doe</span>
+<span class="na">credit</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">John Doe</span>
+<span class="na">url</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s">https://example.com</span>
+<span class="na">license</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">CC BY-SA 4.0</span>
+<span class="na">licenseurl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://creativecommons.org/licenses/by-sa/4.0/</span>
+
+<span class="k">[Syntax]</span>
+<span class="na">background</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s">255, 255, 255</span>
+<span class="na">text</span><span class="w">           </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">link</span><span class="w">           </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">headertext</span><span class="w">     </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">headertag</span><span class="w">      </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">emphasis</span><span class="w">       </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">dialog</span><span class="w">         </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">altdialog</span><span class="w">      </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">note</span><span class="w">           </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">hidden</span><span class="w">         </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">shortcode</span><span class="w">      </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">keyword</span><span class="w">        </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">tag</span><span class="w">            </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">value</span><span class="w">          </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">optional</span><span class="w">       </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">spellcheckline</span><span class="w"> </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">errorline</span><span class="w">      </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">replacetag</span><span class="w">     </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">modifier</span><span class="w">       </span><span class="o">=</span><span class="w">   </span><span class="s">0,   0,   0</span>
+<span class="na">texthighlight</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s">255, 255, 255, 128</span>
+</pre></div>
+</div>
+<p>In the Main section, you must define at least the <code class="docutils literal notranslate"><span class="pre">name</span></code> setting. The Syntax colour values are
+RGB(A) numbers of the format <code class="docutils literal notranslate"><span class="pre">r,</span> <span class="pre">g,</span> <span class="pre">b,</span> <span class="pre">a</span></code> where each is an integer from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">255</span></code>. The
+fourth value is the alpha channel, which can be omitted.</p>
+<p>Omitted syntax colours default to black, except <code class="docutils literal notranslate"><span class="pre">background</span></code> which defaults to white, and
+<code class="docutils literal notranslate"><span class="pre">texthighlight</span></code> which defaults to white with half transparency.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2: </span>The <code class="docutils literal notranslate"><span class="pre">shortcode</span></code> syntax colour entry was added.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.3: </span>The <code class="docutils literal notranslate"><span class="pre">optional</span></code> syntax colour entry was added.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.4: </span>The <code class="docutils literal notranslate"><span class="pre">texthighlight</span></code> syntax colour entry was added.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.5: </span>The <code class="docutils literal notranslate"><span class="pre">dialog</span></code>, <code class="docutils literal notranslate"><span class="pre">altdialog</span></code>, <code class="docutils literal notranslate"><span class="pre">note</span></code> and <code class="docutils literal notranslate"><span class="pre">tag</span></code> syntax colour entries were added.
+<code class="docutils literal notranslate"><span class="pre">straightquotes</span></code>, <code class="docutils literal notranslate"><span class="pre">doublequotes</span></code> and <code class="docutils literal notranslate"><span class="pre">singlequotes</span></code> were removed.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="project_manuscript.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Building the Manuscript</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="more_projectformat.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Project Format Changes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spell-check-dictionaries">Spell Check Dictionaries</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linux-and-macos">Linux and MacOS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-and-gui-themes">Syntax and GUI Themes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-gui-and-icons-theme">Custom GUI and Icons Theme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-syntax-theme">Custom Syntax Theme</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Veronica Berglyd Olsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

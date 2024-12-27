@@ -1,0 +1,732 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>How it Works &#8212; Version 2.6b1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a56b48ff" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=3be339c5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usage_breakdown';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Project Views" href="usage_project.html" />
+    <link rel="prev" title="Glossary" href="int_glossary.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="2.6b1" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/novelwriter-light.png" class="logo__image only-light" alt="Version 2.6b1 - Home"/>
+    <img src="_static/novelwriter-dark.png" class="logo__image only-dark pst-js-only" alt="Version 2.6b1 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<p class="nw-sidebar-title">Version 2.6b1</p>
+</div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Main Page</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="int_introduction.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_overview.html">What to Read First</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_started.html">Setup and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_howto.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_glossary.html">Glossary</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Using novelWriter</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">How it Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_project.html">Project Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_writing.html">The Editor and Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_format.html">Formatting Your Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_shortcuts.html">Keyboard Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_typography.html">Typographical Notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Organising Your Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="project_overview.html">Managing Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_structure.html">Novel Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_references.html">Tags and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_manuscript.html">Building the Manuscript</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="more_customise.html">Customisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_projectformat.html">Project Format Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_counting.html">Word and Text Counts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Topics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tech_locations.html">File Locations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_storage.html">How Data is Stored</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_source.html">Running from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_tests.html">Running Tests</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/vkbo/novelwriter" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/vkbo/novelwriter/issues/new?title=Issue%20on%20page%20%2Fusage_breakdown.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/usage_breakdown.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>How it Works</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui-layout-and-design">GUI Layout and Design</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-tree-and-editor-view">Project Tree and Editor View</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#novel-view-and-editor-view">Novel View and Editor View</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#novel-outline-view">Novel Outline View</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colour-themes">Colour Themes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-search">Project Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#switching-focus">Switching Focus</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-layout">Project Layout</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-manuscript">Building a Manuscript</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-storage">Project Storage</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="how-it-works">
+<span id="a-breakdown"></span><h1>How it Works<a class="headerlink" href="#how-it-works" title="Link to this heading">#</a></h1>
+<p>The main features of novelWriter are listed in the <a class="reference internal" href="int_introduction.html#a-intro"><span class="std std-ref">Overview</span></a> chapter. In this chapter, we go
+into some more details on how they are implemented. This is intended as an overview. Later on in
+this documentation these features will be covered in more detail.</p>
+<section id="gui-layout-and-design">
+<span id="a-breakdown-design"></span><h2>GUI Layout and Design<a class="headerlink" href="#gui-layout-and-design" title="Link to this heading">#</a></h2>
+<p>The user interface of novelWriter is intended to be as minimalistic as practically possible, while
+at the same time provide useful features needed for writing a novel.</p>
+<p>The main window does not by default have an editor toolbar like many other applications do. This
+reduces clutter, and since the documents are formatted with style tags, it is not needed most of
+the time. Still, a small formatting toolbar can be popped out by clicking the left-most button in
+the header of the document editor. It gives quick access to standard formatting codes.</p>
+<p>Most formatting features supported are available through convenient keyboard shortcuts. They are
+also available in the main menu under <strong>Format</strong>, so you don’t have to look up formatting codes
+every time you need them. For reference, a list of all shortcuts can be found in the <a class="reference internal" href="usage_shortcuts.html#a-kb"><span class="std std-ref">Keyboard Shortcuts</span></a>
+chapter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>novelWriter is not intended to be a full office type word processor. It doesn’t support images,
+links, tables, and other complex structures and objects often needed for such documents.
+Formatting is limited to headings, in-line basic text formats, text alignment, and a few other
+simple features.</p>
+</div>
+<p>On the left side of the main window, you will find a sidebar. This bar has buttons for the standard
+views you can switch between, a quick link to the <strong>Build Manuscript</strong> tool, and a set of
+project-related tools and quick access to settings at the bottom.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2: </span>A number of new formatting options were added in 2.2 to allow for some special formatting cases.
+At the same time, a small formatting toolbar was added to the editor. It is hidden by default,
+but can be opened by pressing the button in the top right corner of the editor header.</p>
+</div>
+<section id="project-tree-and-editor-view">
+<h3>Project Tree and Editor View<a class="headerlink" href="#project-tree-and-editor-view" title="Link to this heading">#</a></h3>
+<figure class="align-default" id="id1">
+<img alt="_images/fig_project_tree_view.png" src="_images/fig_project_tree_view.png" />
+<figcaption>
+<p><span class="caption-text">A screenshot of the Project Tree and Editor View.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>When the application is in <strong>Project Tree View</strong> mode, the main work area of the main window is
+split in two, or optionally three, panels. The left-most panel contains the project tree and all
+the documents in your project. The second panel is the document editor.</p>
+<p>An optional third panel on the right side contains a document viewer which can view any document in
+your project independently of what is open in the document editor. This panel is not intended as a
+preview window, although you can use it for this purpose if you wish. For instance if you need to
+check that the formatting tags behave as you expect. However, the main purpose of the viewer is for
+viewing your notes next to your editor while you’re writing.</p>
+<p>The editor also has a <strong>Focus Mode</strong> you can toggle either from the menu, from the icon in the
+editor’s header, or by pressing <kbd class="kbd docutils literal notranslate">F8</kbd>. When <strong>Focus Mode</strong> is enabled, all the user interface
+elements other than the document editor itself are hidden away.</p>
+</section>
+<section id="novel-view-and-editor-view">
+<h3>Novel View and Editor View<a class="headerlink" href="#novel-view-and-editor-view" title="Link to this heading">#</a></h3>
+<figure class="align-default" id="id2">
+<img alt="_images/fig_novel_tree_view.png" src="_images/fig_novel_tree_view.png" />
+<figcaption>
+<p><span class="caption-text">A screenshot of the Novel Tree and Editor View.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>When the application is in <strong>Novel Tree View</strong> mode, the project tree is replaced by an overview of
+your novel structure for a specific Novel <a class="reference internal" href="int_glossary.html#term-Root-Folder"><span class="xref std std-term">root folder</span></a>. Instead of showing individual
+documents, the tree now shows all headings of your novel text. This includes multiple headings
+within the same document.</p>
+<p>Each heading is indented according to the heading level, not its parent/child relationship to other
+elements of your project. You can open and edit your novel documents from this view as well. All
+headings contained in the currently open document should be highlighted in the view to indicate
+which ones belong together in the same document.</p>
+<p>If you have multiple <strong>Novel</strong> type root folders, the header of the novel view becomes a dropdown
+box. You can then switch between them by clicking the <span class="guilabel">Outline of …</span> text. You can also
+click the novel icon button next to it.</p>
+<p>Generally, the novel view should update when you make changes to the novel structure, including
+edits of the current document in the editor. The information is only updated when the automatic
+save of the document is triggered, or you manually press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">S</kbd></kbd> to save changes. (You can
+adjust the auto-save interval in <strong>Preferences</strong>.) You can also regenerate the whole novel view by
+pressing the refresh button in the novel view header.</p>
+<p>It is possible to show an optional third column in the novel view. The settings are available from
+the menu button in the toolbar.</p>
+<p>If you click the triangular icon to the right of each item, a tooltip will pop out showing all the
+meta data collected for that heading.</p>
+</section>
+<section id="novel-outline-view">
+<h3>Novel Outline View<a class="headerlink" href="#novel-outline-view" title="Link to this heading">#</a></h3>
+<figure class="align-default" id="id3">
+<img alt="_images/fig_outline_view.png" src="_images/fig_outline_view.png" />
+<figcaption>
+<p><span class="caption-text">A screenshot of the Novel Outline View.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>When the application is in <strong>Novel Outline View</strong> mode, the tree, editor and viewer will be
+replaced by a large table that shows the entire novel structure with all the tags and references
+listed. Pretty much all collected meta data is available here in different columns.</p>
+<p>You can select which novel root folder to display from the dropdown box, and you can select which
+columns to show or hide from the menu button. You can also rearrange the columns by drag and drop.
+The app will remember your column order and size between sessions, and for each individual project.</p>
+</section>
+<section id="colour-themes">
+<h3>Colour Themes<a class="headerlink" href="#colour-themes" title="Link to this heading">#</a></h3>
+<p>By default, novelWriter will use the colour theme provided by the Qt library, which is determined
+by the <a class="reference external" href="https://doc.qt.io/qt-6/gallery.html">Fusion</a> style setting. You can also choose between a standard dark and light theme that have
+neutral colours from <strong>Preferences</strong>.</p>
+<p>If you wish, you <em>can</em> create your own colour themes, and even have them added to the application.
+See <a class="reference internal" href="more_customise.html#a-custom-theme"><span class="std std-ref">Syntax and GUI Themes</span></a> for more details.</p>
+<p>Switching the GUI colour theme does not affect the colours of the editor and viewer. They have
+separate colour selectable from the “Document colour theme” setting in <strong>Preferences</strong>. They are
+separated because there are a lot more options to choose from for the editor and viewer.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you switch between light and dark mode on the GUI, you should also switch editor theme to
+match, otherwise icons may be hard to see in the editor and viewer.</p>
+</div>
+</section>
+<section id="project-search">
+<h3>Project Search<a class="headerlink" href="#project-search" title="Link to this heading">#</a></h3>
+<p>A global search tool is available from the side bar. It allows you to search through your entire
+project. The tool does not provide a replace feature. There is a search and replace tool available
+in the document editor that acts on the open document.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.4.</span></p>
+</div>
+</section>
+<section id="switching-focus">
+<h3>Switching Focus<a class="headerlink" href="#switching-focus" title="Link to this heading">#</a></h3>
+<p>If the project or novel view does not have focus, pressing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">T</kbd></kbd> switches focus to
+whichever of the two is visible. If one of them already has focus, the key press will switch
+between them instead.</p>
+<p>Likewise, pressing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">E</kbd></kbd> with switch focus to the document editor or viewer, or if any of
+them already have focus, it will switch focus between them,</p>
+<p>These two shortcuts makes it possible to jump between all these GUI elements without having to
+reach for the mouse or touchpad.</p>
+</section>
+</section>
+<section id="project-layout">
+<span id="a-breakdown-project"></span><h2>Project Layout<a class="headerlink" href="#project-layout" title="Link to this heading">#</a></h2>
+<p>This is a brief introduction to how you structure your writing projects. All of this will be
+covered in more detail later.</p>
+<p>The main point of novelWriter is that you are free to organise your project documents as you wish
+into sub-folders or sub-documents, and split the text between these documents in whatever way suits
+you. All that matters to novelWriter is the linear order the documents appear at in the project
+tree (top to bottom). The chapters, scenes and sections of the novel are determined by the headings
+within those documents.</p>
+<figure class="align-default" id="id4">
+<img alt="_images/fig_header_levels.png" src="_images/fig_header_levels.png" />
+<figcaption>
+<p><span class="caption-text">An illustration of how heading levels correspond to the novel structure.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The four heading levels, <strong>Level 1</strong> to <strong>Level 4</strong>, are treated as follows:</p>
+<ul class="simple">
+<li><p><strong>Level 1</strong> is used for the novel title, and for partitions.</p></li>
+<li><p><strong>Level 2</strong> is used for chapter tiles.</p></li>
+<li><p><strong>Level 3</strong> is used for scene titles – optionally replaced by separators.</p></li>
+<li><p><strong>Level 4</strong> is for section titles within scenes, if such granularity is needed.</p></li>
+</ul>
+<p>The project tree will select an icon for the document based on the first heading in it.</p>
+<p>This heading level structure is only taken into account for <a class="reference internal" href="int_glossary.html#term-Novel-Documents"><span class="xref std std-term">novel documents</span></a>. For
+<a class="reference internal" href="int_glossary.html#term-Project-Notes"><span class="xref std std-term">project notes</span></a>, the heading levels have no structural meaning, and you are free to use them
+however you want. See <a class="reference internal" href="project_structure.html#a-struct"><span class="std std-ref">Novel Structure</span></a> and <a class="reference internal" href="project_references.html#a-references"><span class="std std-ref">Tags and References</span></a> for more details.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.0: </span>You can add documents as child items of other documents. This is often more useful than adding
+folders, since you anyway may want to have the chapter heading in a separate document from your
+individual scene documents so that you can rearrange scene documents freely without affecting
+chapter placement.</p>
+</div>
+</section>
+<section id="building-a-manuscript">
+<span id="a-breakdown-export"></span><h2>Building a Manuscript<a class="headerlink" href="#building-a-manuscript" title="Link to this heading">#</a></h2>
+<p>The project can at any time be assembled into a range of different formats through the
+<strong>Build Manuscript</strong> tool. Natively, novelWriter supports <a class="reference external" href="https://en.wikipedia.org/wiki/OpenDocument">Open Document</a>, HTML5, and
+various flavours of Markdown.</p>
+<p>The HTML5 format is suitable for conversion by a number of other tools like <a class="reference external" href="https://pandoc.org/">Pandoc</a>, or for
+importing into word processors if the Open Document format isn’t suitable. The Open Document format
+is supported by most office type applications. In addition, printing is also possible. Print to PDF
+is available from the print dialog.</p>
+<p>For advanced processing, you can export the content of the project to a JSON file. This is useful
+if you want to write your own custom processing script in for instance Python, as the entire novel
+can be read into a Python dictionary with a couple of lines of code. The JSON file can be populated
+with either HTML formatted text, or with the raw text as typed into the novel documents.</p>
+<p>See <a class="reference internal" href="project_manuscript.html#a-manuscript"><span class="std std-ref">Building the Manuscript</span></a> for more details.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.1: </span>You can now define multiple build definitions in the <strong>Build Manuscript</strong> tool. This allows you
+to define specific settings for various types of draft documents, outline documents, and
+manuscript formats. See <a class="reference internal" href="project_manuscript.html#a-manuscript"><span class="std std-ref">Building the Manuscript</span></a> for more details.</p>
+</div>
+</section>
+<section id="project-storage">
+<span id="a-breakdown-storage"></span><h2>Project Storage<a class="headerlink" href="#project-storage" title="Link to this heading">#</a></h2>
+<p>The files of a novelWriter project are stored in a dedicated project folder. The project structure
+is kept in a file at the root of this folder called <code class="docutils literal notranslate"><span class="pre">nwProject.nwx</span></code>. All the document files and
+associated meta data is stored in other folders below the project folder. For more technical
+details about what all the files mean and how they’re organised, see the <a class="reference internal" href="tech_storage.html#a-storage"><span class="std std-ref">How Data is Stored</span></a> section.</p>
+<p>This way of storing data was chosen for several reasons.</p>
+<p>Firstly, all the text you add to your project is saved directly to your project folder in separate
+files. Only the project structure and the text you are currently editing is stored in memory at any
+given time, which means there is a smaller risk of losing data if the application or your computer
+crashes.</p>
+<p>Secondly, having multiple small files means it is very easy to synchronise them between computers
+with standard file synchronisation tools.</p>
+<p>Thirdly, if you use version control software to track the changes to your project, the file formats
+used for the files are well suited. All the JSON documents have line breaks and indents as well,
+which makes it easier to track them with version control software.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since novelWriter has to keep track of a bunch of files and folders when a project is open, it
+may not run well on some virtual file systems. A file or folder must be accessible with exactly
+the path it was saved or created with. An example where this is not the case is the way Google
+Drive is mapped on Linux Gnome desktops using gvfs/gio.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>You should not add additional files to the project folder yourself. Nor should you, as a rule,
+manually edit files within it. If you really must manually edit the text files, e.g. with some
+automated task you want to perform, you need to rebuild the <a class="reference internal" href="int_glossary.html#term-Project-Index"><span class="xref std std-term">Project Index</span></a> when you open
+the project again.</p>
+<p>Editing text files in the <code class="docutils literal notranslate"><span class="pre">content</span></code> folder is less risky as these are just plain text. Editing
+the main project XML file, however, may make the project file unreadable and you may crash
+novelWriter and lose project structure information and project settings.</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="int_glossary.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Glossary</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="usage_project.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Project Views</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui-layout-and-design">GUI Layout and Design</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-tree-and-editor-view">Project Tree and Editor View</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#novel-view-and-editor-view">Novel View and Editor View</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#novel-outline-view">Novel Outline View</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colour-themes">Colour Themes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-search">Project Search</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#switching-focus">Switching Focus</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-layout">Project Layout</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-manuscript">Building a Manuscript</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-storage">Project Storage</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Veronica Berglyd Olsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

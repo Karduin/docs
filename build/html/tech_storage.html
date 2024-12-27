@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>How Data is Stored &#8212; Version 2.6b1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a56b48ff" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=3be339c5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tech_storage';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Running from Source" href="tech_source.html" />
+    <link rel="prev" title="File Locations" href="tech_locations.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="2.6b1" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/novelwriter-light.png" class="logo__image only-light" alt="Version 2.6b1 - Home"/>
+    <img src="_static/novelwriter-dark.png" class="logo__image only-dark pst-js-only" alt="Version 2.6b1 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<p class="nw-sidebar-title">Version 2.6b1</p>
+</div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Main Page</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="int_introduction.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_overview.html">What to Read First</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_started.html">Setup and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_howto.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_glossary.html">Glossary</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Using novelWriter</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="usage_breakdown.html">How it Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_project.html">Project Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_writing.html">The Editor and Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_format.html">Formatting Your Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_shortcuts.html">Keyboard Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_typography.html">Typographical Notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Organising Your Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="project_overview.html">Managing Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_structure.html">Novel Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_references.html">Tags and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_manuscript.html">Building the Manuscript</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="more_customise.html">Customisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_projectformat.html">Project Format Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_counting.html">Word and Text Counts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Topics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tech_locations.html">File Locations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">How Data is Stored</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_source.html">Running from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_tests.html">Running Tests</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/vkbo/novelwriter" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/vkbo/novelwriter/issues/new?title=Issue%20on%20page%20%2Ftech_storage.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tech_storage.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>How Data is Stored</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-structure">Project Structure</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-project-file">Main Project File</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-documents">Project Documents</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-file-saving-process">The File Saving Process</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-meta-data">Project Meta Data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-project-index">The Project Index</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-definitions">Build Definitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cached-gui-options">Cached GUI Options</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-word-list">Custom Word List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#session-stats">Session Stats</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="how-data-is-stored">
+<span id="a-storage"></span><h1>How Data is Stored<a class="headerlink" href="#how-data-is-stored" title="Link to this heading">#</a></h1>
+<p>This chapter contains details of how novelWriter stores and handles the project data.</p>
+<section id="project-structure">
+<h2>Project Structure<a class="headerlink" href="#project-structure" title="Link to this heading">#</a></h2>
+<p>All novelWriter files are written with utf-8 encoding. Since Python automatically converts Unix
+line endings to Windows line endings on Windows systems, novelWriter does not make any adaptations
+to the formatting on Windows systems. This is handled entirely by the Python standard library.
+Python also handles this when working on the same files on both Windows and Unix-based operating
+systems.</p>
+<section id="main-project-file">
+<h3>Main Project File<a class="headerlink" href="#main-project-file" title="Link to this heading">#</a></h3>
+<p>The project itself requires a dedicated folder for storing its files, where novelWriter will create
+its own “file system” where the project’s folder and file hierarchy is described in a project XML
+file. This is the main project file in the project’s root folder with the name <code class="docutils literal notranslate"><span class="pre">nwProject.nwx</span></code>.
+This file also contains all the meta data required for the project (except the index data), and a
+number of related project settings.</p>
+<p>If this file is lost or corrupted, the structure of the project is lost, although not the text
+itself. It is important to keep this file backed up, either through the built-in backup tool, or
+your own backup solution.</p>
+<p>The project XML file is indent-formatted, and is suitable for diff tools and version control since
+most of the file will stay static, although a timestamp is set in the meta section on line 2, and
+various meta data entries incremented, on each save.</p>
+<p>A full description of the current file format is available in the
+<a class="reference download internal" download="" href="_downloads/b90010f8ffc9c978e2b11a514bc1012b/fileformatspec15.pdf"><code class="xref download docutils literal notranslate"><span class="pre">File</span> <span class="pre">Format</span> <span class="pre">Spec</span> <span class="pre">1.5</span></code></a> document, available as a PDF.</p>
+</section>
+</section>
+<section id="project-documents">
+<h2>Project Documents<a class="headerlink" href="#project-documents" title="Link to this heading">#</a></h2>
+<p>All the project documents are saved in a subfolder of the main project folder named <code class="docutils literal notranslate"><span class="pre">content</span></code>.
+Each document has a file handle based on a 52 bit random number, represented as a hexadecimal
+string. The documents are saved with a filename assembled from this handle and the file extension
+<code class="docutils literal notranslate"><span class="pre">.nwd</span></code>.</p>
+<p>If you wish to find the file system location of a document in the project, you can either look it
+up in the project XML file, select <strong>Show File Details</strong> from the <strong>Document</strong> menu when having the
+document open in the editor, or look in the <code class="docutils literal notranslate"><span class="pre">ToC.txt</span></code> file in the root of the project folder. The
+<code class="docutils literal notranslate"><span class="pre">ToC.txt</span></code> file has a list of all documents in the project, referenced by their label, and where
+they are saved.</p>
+<p>The reason for this cryptic file naming is to avoid issues with file naming conventions and
+restrictions on different operating systems, and also to have a file name that does not depend on
+what you name the document within the project, or changes it to. This is particularly useful when
+using a versioning system.</p>
+<p>Each document file contains a plain text version of the text from the editor. The file can in
+principle be edited in any text editor, and is suitable for diffing and version control if so
+desired. Just make sure the file remains in utf-8 encoding, otherwise unicode characters may
+become mangled when the file is opened in novelWriter again.</p>
+<p>Editing these files is generally not recommended. The reason for this is that the index will not be
+automatically updated when doing so, which means novelWriter doesn’t know you’ve altered the file.
+If you <em>do</em> edit a file in this manner, you should rebuild the index when you next open the project
+in novelWriter.</p>
+<p>The first lines of the file may contain some meta data starting with the characters <code class="docutils literal notranslate"><span class="pre">%%~</span></code>. These
+lines are mainly there to restore some information if the file is lost from the main project file,
+and the information may be helpful if you do open the file in an external editor as it contains the
+document label and the document class and layout. The lines can be deleted without any consequences
+to the rest of the content of the file, and will be added back the next time the document is saved
+in novelWriter.</p>
+<section id="the-file-saving-process">
+<h3>The File Saving Process<a class="headerlink" href="#the-file-saving-process" title="Link to this heading">#</a></h3>
+<p>When saving the project file, or any of the documents, the data is first saved to a temporary file.
+If successful, the old data file is then removed, and the temporary file replaces it. This ensures
+that the previously saved data is only replaced when the new data has been successfully saved to
+the storage medium.</p>
+</section>
+</section>
+<section id="project-meta-data">
+<h2>Project Meta Data<a class="headerlink" href="#project-meta-data" title="Link to this heading">#</a></h2>
+<p>The project folder contains a subfolder named <code class="docutils literal notranslate"><span class="pre">meta</span></code>, containing a number of files. The meta
+folder contains semi-important files. That is, they can be lost with only minor impact to the
+project. All files in this folder are JSON or JSON Lines files, although some other files may
+remain from earlier versions of novelWriter as they haven’t all been JSON files in the past.</p>
+<p>If you use version control software on your project, you can exclude this folder, although you may
+want to track the session log file and the custom words list.</p>
+<section id="the-project-index">
+<h3>The Project Index<a class="headerlink" href="#the-project-index" title="Link to this heading">#</a></h3>
+<p>Between writing sessions, the project index is saved in a JSON file in <code class="docutils literal notranslate"><span class="pre">meta/index.json</span></code>.
+This file is not critical. If it is lost, it can be completely rebuilt from within novelWriter from
+the <strong>Tools</strong> menu.</p>
+<p>The index is maintained and updated whenever a document or note is saved in the editor. It contains
+all references and tags in documents and notes, as well as the location of all headers in the
+project, and the word counts within each header section.</p>
+<p>The integrity of the index is checked when the file is loaded. It is possible to corrupt the index
+if the file is manually edited and manipulated, so the check is important to avoid sudden crashes
+of novelWriter. If the file contains errors, novelWriter will automatically build it anew. If the
+check somehow fails and novelWriter keeps crashing, you can delete the file manually and rebuild
+the index. If this too fails, you have likely encountered a bug.</p>
+</section>
+<section id="build-definitions">
+<h3>Build Definitions<a class="headerlink" href="#build-definitions" title="Link to this heading">#</a></h3>
+<p>The build definitions from the <strong>Manuscript Build</strong> tool are kept in the <code class="docutils literal notranslate"><span class="pre">meta/builds.json</span></code> file.
+If this file is lost, all custom build definitions are lost too.</p>
+</section>
+<section id="cached-gui-options">
+<h3>Cached GUI Options<a class="headerlink" href="#cached-gui-options" title="Link to this heading">#</a></h3>
+<p>A file named <code class="docutils literal notranslate"><span class="pre">meta/options.json</span></code> contains the latest state of various GUI buttons, switches,
+dialog window sizes, column sizes, etc, from the GUI. These are the GUI settings that are specific
+to the project. Global GUI settings are stored in the main config file.</p>
+<p>The file is not critical, but if it is lost, all such GUI options will revert back to their default
+settings.</p>
+</section>
+<section id="custom-word-list">
+<h3>Custom Word List<a class="headerlink" href="#custom-word-list" title="Link to this heading">#</a></h3>
+<p>A file named <code class="docutils literal notranslate"><span class="pre">meta/userdict.json</span></code> contains all the custom words you’ve added to the project for
+spell checking purposes. The content of the file can be edited from the <strong>Tools</strong> menu. If you lose
+this file, all your custom spell check words will be lost too.</p>
+</section>
+<section id="session-stats">
+<h3>Session Stats<a class="headerlink" href="#session-stats" title="Link to this heading">#</a></h3>
+<p>The writing progress is saved in the <code class="docutils literal notranslate"><span class="pre">meta/sessions.jsonl</span></code> file. This file records the length
+and word counts of each writing session on the given project. The file is used by the <strong>Writing
+Statistics</strong> tool. If this file is lost, the history it contains is also lost, but it has otherwise
+no impact on the project.</p>
+<p>Each session is recorded as a JSON object on a single line of the file. Each session record is
+appended tot he file.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tech_locations.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">File Locations</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tech_source.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Running from Source</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-structure">Project Structure</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-project-file">Main Project File</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-documents">Project Documents</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-file-saving-process">The File Saving Process</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-meta-data">Project Meta Data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-project-index">The Project Index</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-definitions">Build Definitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cached-gui-options">Cached GUI Options</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-word-list">Custom Word List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#session-stats">Session Stats</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Veronica Berglyd Olsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,707 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Project Views &#8212; Version 2.6b1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a56b48ff" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=3be339c5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usage_project';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Editor and Viewer" href="usage_writing.html" />
+    <link rel="prev" title="How it Works" href="usage_breakdown.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="2.6b1" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/novelwriter-light.png" class="logo__image only-light" alt="Version 2.6b1 - Home"/>
+    <img src="_static/novelwriter-dark.png" class="logo__image only-dark pst-js-only" alt="Version 2.6b1 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<p class="nw-sidebar-title">Version 2.6b1</p>
+</div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Main Page</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="int_introduction.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_overview.html">What to Read First</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_started.html">Setup and Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_howto.html">Tips &amp; Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="int_glossary.html">Glossary</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Using novelWriter</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="usage_breakdown.html">How it Works</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project Views</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_writing.html">The Editor and Viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_format.html">Formatting Your Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_shortcuts.html">Keyboard Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_typography.html">Typographical Notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Organising Your Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="project_overview.html">Managing Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_structure.html">Novel Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_references.html">Tags and References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_manuscript.html">Building the Manuscript</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="more_customise.html">Customisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_projectformat.html">Project Format Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_counting.html">Word and Text Counts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Topics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tech_locations.html">File Locations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_storage.html">How Data is Stored</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_source.html">Running from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tech_tests.html">Running Tests</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/vkbo/novelwriter" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/vkbo/novelwriter/issues/new?title=Issue%20on%20page%20%2Fusage_project.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/usage_project.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project Views</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-project-tree">The Project Tree</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-and-merging-documents">Splitting and Merging Documents</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-documents">Splitting Documents</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-documents">Merging Documents</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#document-importance-and-status">Document Importance and Status</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-tree-drag-drop">Project Tree Drag &amp; Drop</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-novel-tree-view">The Novel Tree View</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-novel-outline-view">The Novel Outline View</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="project-views">
+<span id="a-ui-project"></span><h1>Project Views<a class="headerlink" href="#project-views" title="Link to this heading">#</a></h1>
+<p>This chapter covers in more detail the different project views available in novelWriter.</p>
+<figure class="align-default" id="id1">
+<img alt="_images/fig_project_tree_detailed.png" src="_images/fig_project_tree_detailed.png" />
+<figcaption>
+<p><span class="caption-text">The <strong>Project Content</strong> tree as it appears when loading a sample project.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="the-project-tree">
+<span id="a-ui-tree"></span><h2>The Project Tree<a class="headerlink" href="#the-project-tree" title="Link to this heading">#</a></h2>
+<p>The main window contains a project tree in the left-most panel. It shows the entire structure of
+the project, and has four columns.</p>
+<dl class="simple">
+<dt><strong>Column 1</strong></dt><dd><p>The first column shows the icon and label of each folder, document, or note in your project. The
+label is not the same as the heading title you set inside the document. However, the document’s
+label will appear in the header above the document text itself so you know where in the project
+an open document belongs. The icon is selected based on the type of item, and for novel
+documents, the level of the first heading in the document text.</p>
+</dd>
+<dt><strong>Column 2</strong></dt><dd><p>The second column shows the word count of the document, or the sum of words of the child items
+for folders and documents with sub-documents. If the counts seem incorrect, they can be updated
+by rebuilding the <a class="reference internal" href="int_glossary.html#term-Project-Index"><span class="xref std std-term">project index</span></a> from the <strong>Tools</strong> menu, or by pressing <kbd class="kbd docutils literal notranslate">F9</kbd>.</p>
+</dd>
+<dt><strong>Column 3</strong></dt><dd><p>The third column indicates whether the document is considered active or inactive in the project.
+You can use this flag to indicate that a document is still in the project, but should not be
+considered an active part of it. When you run the <strong>Build Manuscript</strong> tool, you can include or
+exclude documents based on this flag. You can change this value from the right-click
+<a class="reference internal" href="int_glossary.html#term-Context-Menu"><span class="xref std std-term">context menu</span></a>.</p>
+</dd>
+<dt><strong>Column 4</strong></dt><dd><p>The fourth column shows the user-defined status or importance labels you’ve assigned to each
+project item. See <a class="reference internal" href="#a-ui-tree-status"><span class="std std-ref">Document Importance and Status</span></a> for more details on how to uses these labels. You can
+select these labels from the <a class="reference internal" href="int_glossary.html#term-Context-Menu"><span class="xref std std-term">context menu</span></a>, and define them in <strong>Project Settings</strong>.</p>
+</dd>
+</dl>
+<p>Right-clicking an item in the project tree will open a context menu under the cursor, displaying
+a selection of actions that can be performed on the selected item.</p>
+<p>At the top of the project tree, you will find a set of buttons.</p>
+<ul class="simple">
+<li><p>The first button is a quick links button that will show you a dropdown menu of all the
+<a class="reference internal" href="int_glossary.html#term-Root-Folder"><span class="xref std std-term">root folders</span></a> in your project. Selecting one will move to that position in
+the tree. You can also activate this menu by pressing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">L</kbd></kbd>.</p></li>
+<li><p>The next two buttons can be used to move items up and down in the project tree. This is the only
+way to move root folders.</p></li>
+<li><p>The next button opens a dropdown menu for adding new items to the tree. This includes root
+folders and template documents. You can also activate this dropdown menu by pressing
+<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">N</kbd></kbd>.</p></li>
+<li><p>The last button is a menu of further actions you can apply to the project tree.</p></li>
+</ul>
+<p>Below the project tree you will find a small details panel showing the full information of the
+currently selected item. This panel also includes the latest paragraph and character counts in
+addition to the word count.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to set the label of a document to be the same as a header within it, you can
+right-click a header in the document when it is open in the editor and select
+<span class="guilabel">Set as Document Name</span> from the context menu.</p>
+</div>
+<section id="splitting-and-merging-documents">
+<span id="a-ui-tree-split-merge"></span><h3>Splitting and Merging Documents<a class="headerlink" href="#splitting-and-merging-documents" title="Link to this heading">#</a></h3>
+<p>Under the <strong>Transform</strong> submenu in the context menu of an item in the project tree, you will find
+several options on how to change a document or folder. This includes changing between document and
+note, but also splitting them into multiple documents, or merging child items into a single
+document.</p>
+<section id="splitting-documents">
+<h4>Splitting Documents<a class="headerlink" href="#splitting-documents" title="Link to this heading">#</a></h4>
+<figure class="align-default" id="id2">
+<img alt="_images/fig_project_split_tool.png" src="_images/fig_project_split_tool.png" />
+<figcaption>
+<p><span class="caption-text">The <strong>Split Document</strong> dialog.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The <strong>Split Document by Headings</strong> option will open a dialog that allows you to split the selected
+document into multiple new documents based on the headings it contains. You can select at which
+heading level the split is to be performed from the dropdown box. The list box will preview which
+headings will be split into new documents.</p>
+<p>You are given the option to create a folder for these new documents, and whether or not to create a
+hierarchy of documents. That is, put sections under scenes, and scenes under chapters.</p>
+<p>The source document <strong>is not</strong> deleted in the process, but you have the option to let the tool move
+the source document to the <span class="guilabel">Trash</span> folder.</p>
+</section>
+<section id="merging-documents">
+<h4>Merging Documents<a class="headerlink" href="#merging-documents" title="Link to this heading">#</a></h4>
+<figure class="align-default" id="id3">
+<img alt="_images/fig_project_merge_tool.png" src="_images/fig_project_merge_tool.png" />
+<figcaption>
+<p><span class="caption-text">The <strong>Merge Documents</strong> dialog.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>You have two options for merging documents that are child elements of another document. You can
+either <strong>Merge Child Items into Self</strong> and <strong>Merge Child Items into New</strong>. The first option will
+pull all content of child items and merge them into the parent document, while the second option
+will create a new document in the process.</p>
+<p>When merging documents in a folder, you only have the latter process is possible, so only the
+choice <strong>Merge Documents in Folder</strong> is available.</p>
+<p>In either case, the <strong>Merge Documents</strong> dialog will let you exclude documents you don’t want to
+include, and it also lets you reorder them if you wish.</p>
+</section>
+</section>
+<section id="document-importance-and-status">
+<span id="a-ui-tree-status"></span><h3>Document Importance and Status<a class="headerlink" href="#document-importance-and-status" title="Link to this heading">#</a></h3>
+<p>Each document or folder in your project can have either a “Status” or “Importance” flag set. These
+are flags that you control and define yourself, and novelWriter doesn’t use them for anything. To
+modify the labels, go to their respective tabs in <strong>Project Settings</strong>.</p>
+<p>The “Status” flag is intended to tag a <a class="reference internal" href="int_glossary.html#term-Novel-Documents"><span class="xref std std-term">novel document</span></a> as for instance a
+draft or as completed, and the “Importance” flag is intended to tag character notes, or other
+<a class="reference internal" href="int_glossary.html#term-Project-Notes"><span class="xref std std-term">project notes</span></a>, as for instance a main, major, or minor character or story element.</p>
+<p>Whether a document uses a “Status” or “Importance” flag depends on which <a class="reference internal" href="int_glossary.html#term-Root-Folder"><span class="xref std std-term">root folder</span></a> it
+lives in. If it’s in a <strong>Novel</strong> type folder, it uses the “Status” flag, otherwise it uses an
+“Importance” flag.</p>
+</section>
+<section id="project-tree-drag-drop">
+<span id="a-ui-tree-dnd"></span><h3>Project Tree Drag &amp; Drop<a class="headerlink" href="#project-tree-drag-drop" title="Link to this heading">#</a></h3>
+<p>The project tree allows drag &amp; drop to a certain extent to allow you to reorder your documents and
+folders. Moving a document in the project tree will affect the text’s position when you assemble
+your manuscript in the <strong>Manuscript Build</strong> tool.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2: </span>You can now select multiple items in the project tree by holding down the <kbd class="kbd docutils literal notranslate">Ctrl</kbd> or
+<kbd class="kbd docutils literal notranslate">Shift</kbd> key while selecting items.</p>
+</div>
+<p>You can drag and drop documents and regular folders, but not root folders. If you select multiple
+items, they can only be dragged and dropped if they are siblings. That is, they have the same
+parent item in the project. This limitation is due to the way drag and drop is implemented in the
+user interface framework novelWriter is built upon.</p>
+<p>Documents and their folders can be rearranged freely within their root folders. If you move a
+<strong>Novel Document</strong> out of a <strong>Novel</strong> folder, it will be converted to a <strong>Project Note</strong>. Notes can
+be moved freely between all root folders, but keep in mind that if you move a note into a <strong>Novel</strong>
+type root folder, its “Importance” setting will be switched with a “Status” setting. See
+<a class="reference internal" href="#a-ui-tree-status"><span class="std std-ref">Document Importance and Status</span></a>. The old value will not be overwritten though, and should be restored if
+you move it back at some point.</p>
+<p>Root folders in the project tree cannot be dragged and dropped at all. If you want to reorder them,
+you can move them up or down with respect to each other from the arrow buttons at the top of the
+project tree, or by pressing <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Up</kbd></kbd> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Down</kbd></kbd> when they are selected.</p>
+</section>
+</section>
+<section id="the-novel-tree-view">
+<span id="a-ui-tree-novel"></span><h2>The Novel Tree View<a class="headerlink" href="#the-novel-tree-view" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id4">
+<img alt="_images/fig_novel_tree_view.png" src="_images/fig_novel_tree_view.png" />
+<figcaption>
+<p><span class="caption-text">A screenshot of the Novel Tree View.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>An alternative way to view the project structure is the novel view. You can switch to this view by
+selecting the <span class="guilabel">Novel View</span> button in the sidebar. This view is a simplified version of
+the view in the <strong>Outline View</strong>. It is convenient when you want to browse the structure of the
+story itself rather than the document files.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You cannot reorganise the entries in the novel view, or add any new documents, as that would
+imply restructuring the content of the document files themselves. Any such editing must be done
+in the project tree. However, you can add new headings to existing documents, or change
+references, which will be updated in this view when the document is saved.</p>
+</div>
+</section>
+<section id="the-novel-outline-view">
+<span id="a-ui-outline"></span><h2>The Novel Outline View<a class="headerlink" href="#the-novel-outline-view" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id5">
+<img alt="_images/fig_outline_view.png" src="_images/fig_outline_view.png" />
+<figcaption>
+<p><span class="caption-text">A screenshot of the Novel Outline View.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The project’s <strong>Novel Outline View</strong> is available as another view option from the sidebar. The
+outline provides an overview of the novel structure, displaying a tree hierarchy of the elements of
+the novel, that is, the level 1 to 4 headings representing partitions, chapters, scenes and
+sections.</p>
+<p>The document containing the heading can also be displayed as a separate column, as well as the line
+number where the heading is defined. Double-clicking an entry will open the corresponding document
+in the editor and switch to <strong>Project Tree View</strong> mode.</p>
+<p>You can select which novel folder to display from the dropdown menu. You can optionally also choose
+to show a combination of all novel folders.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since the internal structure of the novel does not depend directly on the folder and document
+structure of the project tree, this view will not necessarily look the same, depending on how
+you choose to organise your documents. See the <a class="reference internal" href="project_structure.html#a-struct"><span class="std std-ref">Novel Structure</span></a> page for more details.</p>
+</div>
+<p>Various meta data and information extracted from <a class="reference internal" href="int_glossary.html#term-Tag"><span class="xref std std-term">tags</span></a> can be displayed in columns in
+the outline. A default set of such columns is visible, but you can turn on or off more columns from
+the menu button in the toolbar. The order of the columns can also be rearranged by dragging them to
+a different position. You column settings are saved between sessions on a per-project basis.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>Title</strong> column cannot be disabled or moved.</p>
+</div>
+<p>The information viewed in the outline is based on the <a class="reference internal" href="int_glossary.html#term-Project-Index"><span class="xref std std-term">project index</span></a>. While novelWriter does
+its best to keep the index up to date when contents change, you can always rebuild it manually by
+pressing <kbd class="kbd docutils literal notranslate">F9</kbd> if something isn’t right.</p>
+<p>The outline view itself can be regenerated by pressing the refresh button. By default, the content
+is refreshed each time you switch to this view.</p>
+<p>The <strong>Synopsis</strong> column of the outline view takes its information from a specially formatted
+comment. See <a class="reference internal" href="usage_format.html#a-fmt-comm"><span class="std std-ref">Comments and Synopsis</span></a>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="usage_breakdown.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">How it Works</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="usage_writing.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Editor and Viewer</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-project-tree">The Project Tree</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-and-merging-documents">Splitting and Merging Documents</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-documents">Splitting Documents</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-documents">Merging Documents</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#document-importance-and-status">Document Importance and Status</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-tree-drag-drop">Project Tree Drag &amp; Drop</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-novel-tree-view">The Novel Tree View</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-novel-outline-view">The Novel Outline View</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Veronica Berglyd Olsen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
